@@ -1,0 +1,3 @@
+[submodule "external/surfing"]
+	path = external/surfing
+	url = https://github.com/jonathanpeppers/netmaui-surfing-app-challenge.git
