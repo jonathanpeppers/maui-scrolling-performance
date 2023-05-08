@@ -1,3 +1,5 @@
+#nullable enable
+using Android.App;
 using Android.OS;
 using AndroidX.Core.App;
 
