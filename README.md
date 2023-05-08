@@ -32,14 +32,16 @@ Run the script:
 ```powershell
 .\scripts\scroll-performance.ps1 -package com.companyname.surfingapp -activity crc6435627e4593d70ff9.MainActivity
 ...
-05-08 14:47:41.927 28769 28769 I DOTNET  : Frame(s) that took ~6ms, count: 2
-05-08 14:47:41.928 28769 28769 I DOTNET  : Frame(s) that took ~7ms, count: 1
-05-08 14:47:41.928 28769 28769 I DOTNET  : Frame(s) that took ~8ms, count: 1
-05-08 14:47:41.928 28769 28769 I DOTNET  : Frame(s) that took ~9ms, count: 11
-05-08 14:47:41.928 28769 28769 I DOTNET  : Frame(s) that took ~10ms, count: 1
-05-08 14:47:41.928 28769 28769 I DOTNET  : Frame(s) that took ~11ms, count: 22
-05-08 14:47:41.929 28769 28769 I DOTNET  : Frame(s) that took ~14ms, count: 1
-05-08 14:47:41.929 28769 28769 I DOTNET  : Average frame time: 10.05ms
-05-08 14:47:41.929 28769 28769 I DOTNET  : No. of slow frames: 0
-05-08 14:47:41.929 28769 28769 I DOTNET  : -----
+05-08 14:55:47.347 31085 31085 I DOTNET  : Frame(s) that took ~9ms, count: 2
+05-08 14:55:47.348 31085 31085 I DOTNET  : Frame(s) that took ~10ms, count: 6
+05-08 14:55:47.348 31085 31085 I DOTNET  : Frame(s) that took ~11ms, count: 20
+05-08 14:55:47.348 31085 31085 I DOTNET  : Frame(s) that took ~12ms, count: 2
+05-08 14:55:47.348 31085 31085 I DOTNET  : Frame(s) that took ~15ms, count: 1
+05-08 14:55:47.348 31085 31085 I DOTNET  : Frame(s) that took ~16ms, count: 1
+05-08 14:55:47.348 31085 31085 I DOTNET  : Frame(s) that took ~19ms, count: 1
+05-08 14:55:47.367 31085 31085 I DOTNET  : Frame(s) that took ~22ms, count: 17
+05-08 14:55:47.367 31085 31085 I DOTNET  : Frame(s) that took ~23ms, count: 4
+05-08 14:55:47.368 31085 31085 I DOTNET  : Average frame time: 15.52ms
+05-08 14:55:47.368 31085 31085 I DOTNET  : No. of slow frames: 23
+05-08 14:55:47.368 31085 31085 I DOTNET  : -----
 ```

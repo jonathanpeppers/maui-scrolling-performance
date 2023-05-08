@@ -3,7 +3,8 @@ param (
     [string] $package,
     [Parameter(Mandatory=$true)]
     [string] $activity,
-    [int] $iterations = 2
+    [int] $iterations = 5,
+    [int] $sleep = 1
 )
 
 # Clear some properties, so we don't accidentally hurt startup perf
@@ -19,10 +20,14 @@ param (
 & adb logcat -c
 & adb shell am start -n "$package/$activity" -W
 
+Start-Sleep -Seconds $sleep
+
 # Scroll down N times
 for ($i=0; $i -lt $iterations; $i++) {
-    & adb shell input swipe 500 1000 300 300
-    Start-Sleep -Seconds 1
+    $x = ($i + 1) * 500;
+    $y = ($i + 1) * 1000;
+    & adb shell input swipe $x $y 300 300
+    Start-Sleep -Seconds $sleep
 }
 
 # Print logs
