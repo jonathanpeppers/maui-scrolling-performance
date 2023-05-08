@@ -45,3 +45,8 @@ Run the script:
 05-08 14:55:47.368 31085 31085 I DOTNET  : No. of slow frames: 23
 05-08 14:55:47.368 31085 31085 I DOTNET  : -----
 ```
+
+This scrolls this app a few times and prints out the average frame
+time and the number of frames that took longer than 16ms (60fps).
+
+![img](docs/surferapp.png)
