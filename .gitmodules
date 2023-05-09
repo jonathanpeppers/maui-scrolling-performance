@@ -1,3 +1,6 @@
 [submodule "external/surfing"]
 	path = external/surfing
 	url = https://github.com/jonathanpeppers/netmaui-surfing-app-challenge.git
+[submodule "external/cvslow"]
+	path = external/cvslow
+	url = https://github.com/jonathanpeppers/CvSlowJittering.git
