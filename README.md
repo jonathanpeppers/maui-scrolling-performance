@@ -63,7 +63,7 @@ time and the number of frames that took longer than 16ms (60fps).
 ## Comparing .NET 7 and .NET 8
 
 Testing [this branch](https://github.com/jonathanpeppers/maui/tree/net8.0-FAST)
-to just bring some of the very latest changes over.
+to just bring some of the very latest changes over. Using a Pixel 5 (released in Oct 2020):
 
 ```powershell
 05-08 15:45:52.946  5684  5684 I DOTNET  : Frame(s) that took ~9ms, count: 1
