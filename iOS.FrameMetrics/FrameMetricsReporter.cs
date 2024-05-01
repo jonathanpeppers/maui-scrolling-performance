@@ -4,6 +4,10 @@ using Foundation;
 
 namespace iOS.FrameMetrics;
 
+/// <summary>
+/// Code here is loosely based on:
+/// https://thisiskyle.me/posts/measuring-ios-scroll-performance-is-tough-use-this-to-make-it-simple-and-automated.html
+/// </summary>
 public static class FrameMetricsReporter
 {
     static CADisplayLink displayLink = null!;
