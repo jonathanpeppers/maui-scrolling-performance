@@ -50,14 +50,11 @@ public static class FrameMetricsReporter
 
     static void CalculateNumberOfDroppedFrames(int numberOfFrames)
     {
-        int droppedFrameCount = numberOfFrames - 1 > 0 ? numberOfFrames : 0;
-        currentFrameDropCount += droppedFrameCount;
+        int droppedFrameCount = numberOfFrames - 1;
         if (droppedFrameCount > 0)
         {
-            currentFrameDropCount++;
-        }
-        if (droppedFrameCount > 0)
-        {
+            currentFrameDropCount += droppedFrameCount;
+
             Console.WriteLine($"Frames dropped: {droppedFrameCount}");
             Console.WriteLine($"Cumulative frames dropped: {currentFrameDropCount}");
             Console.WriteLine("-----");
