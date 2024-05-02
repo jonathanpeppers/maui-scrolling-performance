@@ -11,7 +11,48 @@ We can use this to measure the scrolling performance of .NET MAUI apps.
 [android-docs]: https://developer.android.com/topic/performance/measuring-performance
 [frame-metrics]: https://developer.android.com/reference/androidx/core/app/FrameMetricsAggregator
 
+For iOS, we can use `CADisplayLink` to measure the frame times, such
+as the example on:
+
+* https://thisiskyle.me/posts/measuring-ios-scroll-performance-is-tough-use-this-to-make-it-simple-and-automated.html
+
 ## How to Setup?
+
+### iOS or MacCatalyst
+
+In either `Platforms/MacCatalyst/AppDelegate.cs` or `Platforms/iOS/AppDelegate.cs`:
+
+```csharp
+public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
+{
+    var result = base.FinishedLaunching(application, launchOptions);
+    iOS.FrameMetrics.FrameMetricsReporter.Initialize();
+    return result;
+}
+```
+
+This uses `CADisplayLink` to measure how fast the display can refresh.
+
+Run the app and scroll around a bit. You can see output such as:
+
+```log
+2024-05-01 14:34:50.404623-0500 CvSlowJittering[98066:9539784] Frames dropped: 38
+2024-05-01 14:34:50.404726-0500 CvSlowJittering[98066:9539784] Cumulative frames dropped: 76
+2024-05-01 14:34:50.404787-0500 CvSlowJittering[98066:9539784] -----
+2024-05-01 14:34:50.955571-0500 CvSlowJittering[98066:9539784] Frames dropped: 32
+2024-05-01 14:34:50.955675-0500 CvSlowJittering[98066:9539784] Cumulative frames dropped: 108
+2024-05-01 14:34:50.955729-0500 CvSlowJittering[98066:9539784] -----
+2024-05-01 14:34:51.149430-0500 CvSlowJittering[98066:9539784] Frames dropped: 6
+2024-05-01 14:34:51.149549-0500 CvSlowJittering[98066:9539784] Cumulative frames dropped: 114
+2024-05-01 14:34:51.149626-0500 CvSlowJittering[98066:9539784] -----
+```
+
+I haven't written a script to capture this data yet, so you'll have to
+do this manually for now. A `CollectionView` with a single `Label`
+will drop very few frames, while the examples in `external` will drop
+many frames.
+
+### Android
 
 In `Platforms/Android/MainActivity.cs`:
 

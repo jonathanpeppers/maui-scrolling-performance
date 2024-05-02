@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Android.FrameMetrics", "Android.FrameMetrics\Android.FrameMetrics.csproj", "{C844E003-BF52-4178-87CF-000B0959EE28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iOS.FrameMetrics", "iOS.FrameMetrics\iOS.FrameMetrics.csproj", "{0C66DA24-F470-4178-A592-447866B7DCF3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C844E003-BF52-4178-87CF-000B0959EE28}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C844E003-BF52-4178-87CF-000B0959EE28}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C844E003-BF52-4178-87CF-000B0959EE28}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C844E003-BF52-4178-87CF-000B0959EE28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C66DA24-F470-4178-A592-447866B7DCF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C66DA24-F470-4178-A592-447866B7DCF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C66DA24-F470-4178-A592-447866B7DCF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C66DA24-F470-4178-A592-447866B7DCF3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
