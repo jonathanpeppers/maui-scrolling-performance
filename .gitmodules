@@ -4,3 +4,6 @@
 [submodule "external/cvslow"]
 	path = external/cvslow
 	url = https://github.com/jonathanpeppers/CvSlowJittering.git
+[submodule "external/gallery"]
+	path = external/gallery
+	url = https://github.com/jonathanpeppers/MauiCollectionViewGallery.git
