@@ -122,3 +122,34 @@ longer have any frames that take longer than 16ms (or 60 fps).
 If we plot these timings, you can get an interesting comparison:
 
 ![img](docs/net7vs8.png)
+
+## Some Results
+
+On a Pixel 7, `external/gallery` using the script:
+
+```
+> .\scripts\scroll-performance.ps1 -package com.companyname.mauicollectionviewgallery -activity crc64335d5648794690ab.MainActivity
+...
+06-04 16:31:28.204 31433 31433 I DOTNET  : Frame(s) that took ~3ms, count: 2
+06-04 16:31:28.204 31433 31433 I DOTNET  : Frame(s) that took ~4ms, count: 4
+06-04 16:31:28.204 31433 31433 I DOTNET  : Frame(s) that took ~5ms, count: 7
+06-04 16:31:28.205 31433 31433 I DOTNET  : Frame(s) that took ~6ms, count: 14
+06-04 16:31:28.205 31433 31433 I DOTNET  : Frame(s) that took ~7ms, count: 79
+06-04 16:31:28.205 31433 31433 I DOTNET  : Frame(s) that took ~8ms, count: 7
+06-04 16:31:28.205 31433 31433 I DOTNET  : Frame(s) that took ~9ms, count: 5
+06-04 16:31:28.205 31433 31433 I DOTNET  : Frame(s) that took ~10ms, count: 6
+06-04 16:31:28.205 31433 31433 I DOTNET  : Frame(s) that took ~11ms, count: 2
+06-04 16:31:28.206 31433 31433 I DOTNET  : Frame(s) that took ~12ms, count: 3
+06-04 16:31:28.206 31433 31433 I DOTNET  : Frame(s) that took ~13ms, count: 3
+06-04 16:31:28.206 31433 31433 I DOTNET  : Frame(s) that took ~14ms, count: 3
+06-04 16:31:28.206 31433 31433 I DOTNET  : Frame(s) that took ~15ms, count: 1
+06-04 16:31:28.206 31433 31433 I DOTNET  : Frame(s) that took ~16ms, count: 1
+06-04 16:31:28.206 31433 31433 I DOTNET  : Frame(s) that took ~17ms, count: 3
+06-04 16:31:28.206 31433 31433 I DOTNET  : Frame(s) that took ~20ms, count: 2
+06-04 16:31:28.207 31433 31433 I DOTNET  : Frame(s) that took ~21ms, count: 2
+06-04 16:31:28.207 31433 31433 I DOTNET  : Frame(s) that took ~26ms, count: 1
+06-04 16:31:28.207 31433 31433 I DOTNET  : Frame(s) that took ~28ms, count: 1
+06-04 16:31:28.207 31433 31433 I DOTNET  : Average frame time: 8.30ms
+06-04 16:31:28.207 31433 31433 I DOTNET  : No. of slow frames: 10
+06-04 16:31:28.207 31433 31433 I DOTNET  : -----
+```
