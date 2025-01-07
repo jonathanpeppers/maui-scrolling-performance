@@ -101,55 +101,23 @@ time and the number of frames that took longer than 16ms (60fps).
 
 ![img](docs/surferapp.png)
 
-## Comparing .NET 7 and .NET 8
+## Results
 
-Testing [this branch](https://github.com/jonathanpeppers/maui/tree/net8.0-FAST)
-to just bring some of the very latest changes over. Using a Pixel 5 (released in Oct 2020):
+Installed software:
 
-```powershell
-05-08 15:45:52.946  5684  5684 I DOTNET  : Frame(s) that took ~9ms, count: 1
-05-08 15:45:52.947  5684  5684 I DOTNET  : Frame(s) that took ~10ms, count: 1
-05-08 15:45:52.947  5684  5684 I DOTNET  : Frame(s) that took ~11ms, count: 13
-05-08 15:45:52.947  5684  5684 I DOTNET  : Frame(s) that took ~13ms, count: 3
-05-08 15:45:52.947  5684  5684 I DOTNET  : Average frame time: 11.17ms
-05-08 15:45:52.947  5684  5684 I DOTNET  : No. of slow frames: 0
-05-08 15:45:52.947  5684  5684 I DOTNET  : -----
+```md
+.NET SDK 9.0.101
+
+Installed Workload Id      Manifest Version       Installation Source
+---------------------------------------------------------------------
+android                    35.0.7/9.0.100         VS 17.12.35527.113
+ios                        18.1.9163/9.0.100      VS 17.12.35527.113
+maccatalyst                18.1.9163/9.0.100      VS 17.12.35527.113
+maui-windows               9.0.0/9.0.100          VS 17.12.35527.113
 ```
 
-The average frame time dropped from 15.52ms to 11.17ms, and we no
-longer have any frames that take longer than 16ms (or 60 fps).
-
-If we plot these timings, you can get an interesting comparison:
-
-![img](docs/net7vs8.png)
-
-## Some Results
-
-On a Pixel 7, `external/gallery` using the script:
-
-```
-> .\scripts\scroll-performance.ps1 -package com.companyname.mauicollectionviewgallery -activity crc64335d5648794690ab.MainActivity
-...
-06-04 16:31:28.204 31433 31433 I DOTNET  : Frame(s) that took ~3ms, count: 2
-06-04 16:31:28.204 31433 31433 I DOTNET  : Frame(s) that took ~4ms, count: 4
-06-04 16:31:28.204 31433 31433 I DOTNET  : Frame(s) that took ~5ms, count: 7
-06-04 16:31:28.205 31433 31433 I DOTNET  : Frame(s) that took ~6ms, count: 14
-06-04 16:31:28.205 31433 31433 I DOTNET  : Frame(s) that took ~7ms, count: 79
-06-04 16:31:28.205 31433 31433 I DOTNET  : Frame(s) that took ~8ms, count: 7
-06-04 16:31:28.205 31433 31433 I DOTNET  : Frame(s) that took ~9ms, count: 5
-06-04 16:31:28.205 31433 31433 I DOTNET  : Frame(s) that took ~10ms, count: 6
-06-04 16:31:28.205 31433 31433 I DOTNET  : Frame(s) that took ~11ms, count: 2
-06-04 16:31:28.206 31433 31433 I DOTNET  : Frame(s) that took ~12ms, count: 3
-06-04 16:31:28.206 31433 31433 I DOTNET  : Frame(s) that took ~13ms, count: 3
-06-04 16:31:28.206 31433 31433 I DOTNET  : Frame(s) that took ~14ms, count: 3
-06-04 16:31:28.206 31433 31433 I DOTNET  : Frame(s) that took ~15ms, count: 1
-06-04 16:31:28.206 31433 31433 I DOTNET  : Frame(s) that took ~16ms, count: 1
-06-04 16:31:28.206 31433 31433 I DOTNET  : Frame(s) that took ~17ms, count: 3
-06-04 16:31:28.206 31433 31433 I DOTNET  : Frame(s) that took ~20ms, count: 2
-06-04 16:31:28.207 31433 31433 I DOTNET  : Frame(s) that took ~21ms, count: 2
-06-04 16:31:28.207 31433 31433 I DOTNET  : Frame(s) that took ~26ms, count: 1
-06-04 16:31:28.207 31433 31433 I DOTNET  : Frame(s) that took ~28ms, count: 1
-06-04 16:31:28.207 31433 31433 I DOTNET  : Average frame time: 8.30ms
-06-04 16:31:28.207 31433 31433 I DOTNET  : No. of slow frames: 10
-06-04 16:31:28.207 31433 31433 I DOTNET  : -----
-```
+| .NET version | Sample  | Device      | Average Frame (ms) | Slow Frames |
+| ------------ | ------- | ----------- | -----------------: | ----------: |
+| .NET 8       | cvslow  | Pixel 7 Pro |             6.90ms |          10 |
+| .NET 8       | surfing | Pixel 7 Pro |             7.39ms |          14 |
+| .NET 8       | gallery | Pixel 7 Pro |             9.20ms |          34 |
