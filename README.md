@@ -119,5 +119,8 @@ maui-windows               9.0.0/9.0.100          VS 17.12.35527.113
 | .NET version | Sample  | Device      | Average Frame (ms) | Slow Frames |
 | ------------ | ------- | ----------- | -----------------: | ----------: |
 | .NET 8       | cvslow  | Pixel 7 Pro |             6.90ms |          10 |
+| .NET 9       | cvslow  | Pixel 7 Pro |             5.99ms |           4 |
 | .NET 8       | surfing | Pixel 7 Pro |             7.39ms |          14 |
+| .NET 9       | surfing | Pixel 7 Pro |             8.22ms |          18 |
 | .NET 8       | gallery | Pixel 7 Pro |             9.20ms |          34 |
+| .NET 9       | gallery | Pixel 7 Pro |             8.25ms |          25 |
